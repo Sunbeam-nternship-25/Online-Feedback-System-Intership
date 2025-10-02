@@ -10,6 +10,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
+
 app.use((request, response, next) => {
   if (request.url == "/teacher/login" || request.url == "/teacher/register") {
     next();
@@ -47,12 +49,8 @@ app.use("/teacher", teacherRouter);
 app.use("/feedback", feedbackRouter);
 app.use("/question" , questionRouter)
 
-app.get('/',(req,res)=>{
-  res.send({
-    activeStatus:true,
-    error:false
-  })
-})
+app.get("/", (req, res) => res.send("Server is running"));
+
 
 app.listen(4004, "0.0.0.0", () => {
   console.log("server is running on port 4004");

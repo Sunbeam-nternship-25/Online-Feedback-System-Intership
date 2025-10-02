@@ -60,6 +60,7 @@ app.use('/module_type',module_typeRoute)
 app.use('/feedbackSchedule',feedback_scheduleRoute)
 app.use('/teacher',teacherRoute)
 
+app.get("/", (req, res) => res.send("Server is running"));
 
 
 app.listen(4003, () => {
