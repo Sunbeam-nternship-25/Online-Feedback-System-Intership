@@ -55,7 +55,12 @@ app.use("/feedback",feedbackRouter)
 app.use("/course" , courseRouter)
 app.use("/group",groupRouter)
 
-
+app.get('/',(req,res)=>{
+  res.send({
+    activeStatus:true,
+    error:false
+  })
+})
 app.listen(4000, "0.0.0.0", () => {
   console.log("server is running on port 4000");
 });
