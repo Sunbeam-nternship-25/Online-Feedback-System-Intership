@@ -1,0 +1,161 @@
+/* CocoDashboard css  */
+.container, .dashboard-container {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  justify-content: center;
+  margin: 30px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings */
+.page-header, .dashboard-title, h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #004aad;
+  text-align: center;
+}
+
+/* Table */
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.dashboard-table th {
+  background-color: #f1f5ff;
+  color: #004aad;
+}
+
+/* Status */
+.status-active {
+  color: green;
+  font-weight: bold;
+}
+.status-inactive {
+  color: red;
+  font-weight: bold;
+}
+
+/* Buttons */
+form .btn-view,
+.btn-edit,
+.btn-cancel,
+.btn-success,
+.btn-submit {
+  background-color: #004aad;
+  color: white;
+  display: block;
+  margin: 20px auto;   /* auto centers it */
+  min-width: 100px;  /* optional, to make button wider */
+  text-align: center;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-view:hover,
+.btn-edit:hover,
+.btn-cancel:hover,
+.btn-success:hover,
+.btn-submit:hover {
+  background-color: #003080;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom:0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* User Profile Card */
+.user-profile {
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  width: 300px;
+  background: linear-gradient(135deg, #f8faff, #ffffff);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-size: 14px;
+  color: #333;
+}
+
+.user-profile h4 {
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #004aad;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.user-profile strong {
+  color: #004aad;
+}
+
+
+td .btn-view,
+td .btn-edit,
+td .btn-cancel {
+  display: block;      /* stack buttons vertically */
+  width: 100%;         /* take full td width */
+  margin: 6px 0;       /* spacing between buttons */
+}
+
+
+.dashboard-container label {
+  font-weight: bold;
+   color:black;
+  
+  
+}
+
+

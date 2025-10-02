@@ -1,0 +1,57 @@
+/* cocoregister.css */
+
+.container {
+  font-family: Arial, sans-serif; /* Same as navbar */
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: #6a6a6a;
+}
+
+.input-container input,
+.input-container select {
+  width: 100%;
+  padding: 8px; /* slightly bigger for better look */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.login-form-container {
+  width: 400px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.btn-success {
+  background-color: #004aad; /* Match navbar color */
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%; /* full width button */
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn-success:hover {
+  background-color: #003080;
+}
+
+.page-header {
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 15px;
+}

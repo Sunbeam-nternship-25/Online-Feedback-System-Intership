@@ -1,0 +1,43 @@
+.container {
+  font-family: Arial, sans-serif; /* Same as navbar */
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: #6a6a6a;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form-container {
+  width: 400px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+.btn-success {
+  background-color: #004aad; /* Match navbar color */
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-success:hover {
+  background-color: #003080;
+}
