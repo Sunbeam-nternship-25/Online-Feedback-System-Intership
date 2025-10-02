@@ -10,6 +10,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors())
 
+app.get("/", (req, res) => res.send("Server is running"));
+
+
 app.use((request, response, next) => {
   if (request.url == "/admin/login") {
     next();
@@ -59,7 +62,6 @@ app.use("/student", studentRouter);
 app.use("/teacher", teacherRouter);
 
 
-app.get("/", (req, res) => res.send("Server is running"));
 
 
 app.listen(4001, "0.0.0.0", () => {
