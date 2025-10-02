@@ -10,6 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get("/", (req, res) => res.send("Server is running"));
 
 
 app.use((request, response, next) => {
@@ -49,7 +50,7 @@ app.use("/teacher", teacherRouter);
 app.use("/feedback", feedbackRouter);
 app.use("/question" , questionRouter)
 
-app.get("/", (req, res) => res.send("Server is running"));
+
 
 
 app.listen(4004, "0.0.0.0", () => {

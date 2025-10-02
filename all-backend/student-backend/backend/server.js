@@ -10,6 +10,7 @@ app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded());
 
+app.get("/", (req, res) => res.send("Server is running"));
 
 
 app.use((request, response, next) => {
@@ -55,7 +56,6 @@ app.use("/feedback",feedbackRouter)
 app.use("/course" , courseRouter)
 app.use("/group",groupRouter)
 
-app.get("/", (req, res) => res.send("Server is running"));
 
 app.listen(4000, "0.0.0.0", () => {
   console.log("server is running on port 4000");

@@ -11,6 +11,7 @@ const jwt = require("jsonwebtoken")
 app.use(cors())
 app.use(express.json())
 
+app.get("/", (req, res) => res.send("Server is running"));
 
 app.use((request, response, next) => {
   if (request.url == '/coco/newRegister' || request.url == '/coco/login' ||  request.url == "/course/courses") {
@@ -60,7 +61,6 @@ app.use('/module_type',module_typeRoute)
 app.use('/feedbackSchedule',feedback_scheduleRoute)
 app.use('/teacher',teacherRoute)
 
-app.get("/", (req, res) => res.send("Server is running"));
 
 
 app.listen(4003, () => {
