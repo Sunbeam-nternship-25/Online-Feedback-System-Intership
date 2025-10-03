@@ -21,6 +21,8 @@ export async function registerTeacher(
   email,
   password
 ) {
+
+  
   try {
     const url = `${config.teacherServerBaseURL}/teacher/register`;
     const body = {
