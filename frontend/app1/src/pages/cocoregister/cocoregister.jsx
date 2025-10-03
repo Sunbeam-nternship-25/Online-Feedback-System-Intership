@@ -4,6 +4,7 @@ import { register } from "../../service/coco";
 import Navbar from "../navbar/navbar";
 import { getCourses } from "../../service/course";
 import "./cocoregister.css"; // ✅ reuse login page css
+import { useNavigate } from 'react-router-dom';
 
 function CocoRegister() {
   const [form, setForm] = useState({
@@ -14,6 +15,8 @@ function CocoRegister() {
     password: "",
     confirm_password: "",
   });
+
+  const navigate = useNavigate()
 
   const [courses, setCourses] = useState([]);
 
@@ -73,6 +76,8 @@ function CocoRegister() {
         password: "",
         confirm_password: "",
       });
+      navigate(-1)
+
     } else {
       toast.error(result.error || "Registration failed");
     }

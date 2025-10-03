@@ -14,6 +14,30 @@ export async function login(email, password) {
   }
 }
 
+
+export async function registerTeacher(
+  first_name,
+  last_name,
+  email,
+  password
+) {
+  try {
+    const url = `${config.teacherServerBaseURL}/teacher/register`;
+    const body = {
+      first_name,
+      last_name,
+      email,
+      password
+    };
+
+    const response = await axios.post(url, body);
+
+    return response.data;
+  } catch (ex) {
+    console.log(`Exception :`, ex);
+  }
+}
+
 export async function feedbackInfo() {
   const url = `${config.teacherServerBaseURL}/feedback/feedbackinfo`;
 
