@@ -1,7 +1,7 @@
 import axios from "axios";
 import { config } from "../service/config";
 
-const BASE_URL = "http://localhost:4003/feedbackSchedule";
+const BASE_URL = `${config.cocoServerBaseURL}/feedbackSchedule`;
 
 
 // Create new schedule (default export)
@@ -42,7 +42,7 @@ export const getDeactiveFeedbacks = () => {
 // Update schedule
 export const updateFeedback = (id, payload) => {
   return axios.put(
-    `http://localhost:4003/feedbackSchedule/updateFeedback/${id}`,
+    `${config.cocoServerBaseURL}/feedbackSchedule/updateFeedback/${id}`,
     payload,
     {
       headers: {

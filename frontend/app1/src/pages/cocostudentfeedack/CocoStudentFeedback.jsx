@@ -17,7 +17,7 @@ function CocoStudentFeedback() {
     const token = localStorage.getItem("token");
 
     axios
-      .get(`http://localhost:4003/feedbackSchedule/${scheduleId}/students`, {
+      .get(`${config.cocoServerBaseURL}/feedbackSchedule/${scheduleId}/students`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {

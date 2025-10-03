@@ -11,6 +11,7 @@ import { getGroupbycourse_nameCoco } from "../../service/group";
 import { getCourses } from "../../service/course";
 import "./CocoDashboard.css"
 
+import { config } from "../../service/config";
 
 function FeedbackDashboard() {
   const [schedules, setSchedules] = useState([]);
@@ -105,7 +106,7 @@ function FeedbackDashboard() {
 
   const fetchSchedules = () => {
     axios
-      .get(`http://localhost:4003/feedbackSchedule/feedbackSchedules`, {
+      .get(`${config.cocoServerBaseURL}/feedbackSchedule/feedbackSchedules`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((res) => {
@@ -184,7 +185,7 @@ function FeedbackDashboard() {
  const handleCancel = (id) => {
   if (window.confirm("Are you sure you want to cancel this feedback schedule?")) {
     axios
-      .delete(`http://localhost:4003/feedbackSchedule/deleteFeedback/${id}`, {
+      .delete(`${config.cocoServerBaseURL}/feedbackSchedule/deleteFeedback/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then(() => {
