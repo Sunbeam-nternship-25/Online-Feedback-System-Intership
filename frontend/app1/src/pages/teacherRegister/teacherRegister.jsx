@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import { registerTeacher } from '../../service/teacher';
 import Navbar from '../navbar/navbar';
 import './teacherRegister.css'; // Reuse the same CSS as login page
