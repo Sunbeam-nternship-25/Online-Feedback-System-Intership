@@ -4,7 +4,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../coconavbar/navbar";
 import "./cocostudentfeedback.css";
-import "../../service/config"
+import { config } from "../../service/config";
+
 
 function CocoStudentFeedback() {
   const { id: scheduleId } = useParams(); // get scheduleId from URL
